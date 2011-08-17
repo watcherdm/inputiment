@@ -1,0 +1,18 @@
+{
+	"name" : "inputiment",
+	"version" : "0.2.2",
+	"description" : "The speech input extension. Adds speech support to input boxes by clicking the microphone icon on the right and start talking.",
+	"permissions" : [
+		"*"
+	],
+	"content_scripts" : [{
+		"matches" : ["http://*/", "https://*/"],
+		"js" : ["inputiment.js"]
+	}],
+	"icons": { 
+		"32": "icon32.png",
+		"48": "icon48.png",
+		"64": "icon64.png",
+		"128": "icon128.png"
+	}
+}
