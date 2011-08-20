@@ -6,12 +6,14 @@
 		"*"
 	],
 	"background_page" : "inputiment.html",
-	"permissions": ["tabs", "http://*/*", "https://*/*"],
-	"content_scripts" : [{
-		"matches" : ["http://*/", "https://*/"],
-		"js" : ["inputiment.js"],
-		"run_at" : "document_idle"
-	}],
+	"permissions": ["tabs", "http://*/", "https://*/"],
+//  when I tested this, It worked. If that holds true for others, then I will just remove it altogether
+//
+//	"content_scripts" : [{
+//		"matches" : ["http://*/", "https://*/"],
+//		"js" : ["inputiment.js"],
+//		"run_at" : "document_idle"
+//	}],
 	"icons": { 
 		"32": "icon32.png",
 		"48": "icon48.png",
