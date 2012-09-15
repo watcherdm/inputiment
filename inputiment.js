@@ -16,6 +16,8 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+console.warn("Launching inputiment on this page");
+
 var inputiment = {}
 
 inputiment.g = function(){
@@ -36,8 +38,14 @@ inputiment.grabTheMic = setInterval(function(){
 		speech.setAttribute("style","border : 0px; width : 20px; float : right; color : white;");
 		speech.onwebkitspeechchange = function( event ){
 			var value = ( event.results[0].confidence > 0.5 ) ? event.results[0].utterance : item.value;
-			item.value = value;
-			item.focus();
+			if (value == "") return;
+
+      if (item.value == "") {
+        item.value = value;
+      } else {
+        item.value = item.value + " " + value;
+      }
+      item.focus()
 		}
 
 		item.__speech__ = speech;

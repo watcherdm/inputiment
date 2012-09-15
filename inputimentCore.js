@@ -1,4 +1,3 @@
-<script>
 /**
 	inputiment - a speech impediment for input fields
     Copyright (C) 2011 Gabriel Joshua Hernandez <webspinner.gabriel@gmail.com>
@@ -16,6 +15,7 @@
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
+console.warn("Booting up inputiment");
 chrome.tabs.getAllInWindow(null, function(tabs) {
   tabs.forEach(function(tab){
     if(tab.url.indexOf('chrome') !== 0) { // avoid configuration pages
@@ -31,4 +31,3 @@ chrome.tabs.onUpdated.addListener( function(tabId, changeInfo, tab) {
     }
   }
 });
-</script>
